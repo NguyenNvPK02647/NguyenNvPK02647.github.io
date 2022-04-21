@@ -250,15 +250,15 @@ function signincheck() {
         console.log(isCheck)
         if (isCheck) {
             if(store.loginxuatthongtin(a,b).role === 'admin'){
-               alert('thành công admin')
+               alert('Đăng nhập thành công! Quyền truy cập: admin')
             window.location.href = "./productAdmin.html"; 
             }
             else if(store.loginxuatthongtin(a,b).role === 'user'){
-            alert('thành công user')
+            alert('Đăng nhập thành công! Quyền truy cập: user')
             window.location.href = "./productUser.html";
         }
         else{
-            alert('đăng nhập thất bại')
+            alert('Đăng nhập thất bại')
         }
 }
 }
