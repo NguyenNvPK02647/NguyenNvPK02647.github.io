@@ -15,7 +15,7 @@ document.getElementById('frmProductCreate').addEventListener('submit', function 
             store.save();
             renderTable(store.getProduct())
         } else {
-            alert('false')
+            alert('Sản phẩm tồn tại')
         }
     }
 
@@ -75,11 +75,11 @@ function onEdit(id) {
             const product = new Product(id, name, price, description, image)
             const isUpdate = store.update(product)
             if (isUpdate) {
-                alert('thành công ')
+                alert('Thành công ')
                 store.save();
                 renderTable(store.getProduct())
             } else {
-                alert('false')
+                alert('Sản phẩm đã tồn tại')
             }
         }
 
